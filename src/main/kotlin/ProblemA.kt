@@ -2,29 +2,29 @@ class ProblemA {
 
     fun main() {
 
-        var t: Int = readInt();
-        var inputString: List<Long>;
-        var a: Long;
-        var b: Long;
-        var k: Long;
-        var positionFrog: Long = 0;
+        val t = readInt()
+        var a: Long
+        var b: Long
+        var k: Long
+        var positionFrog = 0L
 
-        for (i in 0..t-1) {
-            inputString = readListLong();
-            a = inputString[0];
-            b = inputString[1];
-            k = inputString[2];
+        for (i in 0 until t) {
+            val inputString = readListLong()
 
-            for (j in 0..k-1) {
+            a = inputString[0]
+            b = inputString[1]
+            k = inputString[2]
+
+            for (j in 0 until k) {
                 if (j % 2 == 0L) {
-                    positionFrog += a;
+                    positionFrog += a
                 } else {
-                    positionFrog -= b;
+                    positionFrog -= b
                 }
             }
 
-            println(positionFrog);
-            positionFrog = 0;
+            println(positionFrog)
+            positionFrog = 0
         }
     }
 

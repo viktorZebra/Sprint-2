@@ -5,36 +5,35 @@ class ProblemB {
 
     fun main() {
 
-        var n: Int;
-        var k: Int;
-        var inputValue: List<Int>;
-        var resultString: String = "";
+        val t = readInt()
 
-        var t: Int = readInt();
+        var n: Int
+        var k: Int
+        var resultString: String = ""
 
-        for (i in 0..t-1)
+        for (i in 0 until t)
         {
-            inputValue = readListInt();
-            n = inputValue[0];
-            k = inputValue[1];
+            val inputValue = readListInt()
+            n = inputValue[0]
+            k = inputValue[1]
 
-            var count: Int = 0;
-            for (j in 0..n-1)
+            var count = 0
+            for (j in 0 until n)
             {
-                resultString += ('a' + count);
+                resultString += ('a' + count)
 
                 if (count == k - 1)
                 {
-                    count = 0;
+                    count = 0
                 }
                 else
                 {
-                    count++;
+                    count++
                 }
             }
 
-            println(resultString);
-            resultString = "";
+            println(resultString)
+            resultString = ""
         }
 
     }

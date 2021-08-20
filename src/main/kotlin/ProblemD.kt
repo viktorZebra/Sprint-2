@@ -2,34 +2,30 @@ class ProblemD {
 
     fun main() {
 
-        var n: Int;
-        var arrayCoins: List<Long>;
-        var maxProfit: Long = 0;
+        var maxProfit = 0L
 
-        var t: Int = readInt();
+        val t = readInt()
 
-        for (i in 0..t-1)
+        for (i in 0 until t)
         {
-            n = readInt();
-            arrayCoins = readListLong();
+            val n = readInt()
+            val arrayCoins = readListLong().sortedDescending()
 
-            arrayCoins = arrayCoins.sortedDescending();
-
-            var count: Int = 1;
-            var buf: Long;
+            var count = 1
+            var buf: Long
             for (coin in arrayCoins)
             {
-                buf = coin * count;
+                buf = coin * count
 
                 if (buf > maxProfit)
                 {
-                    maxProfit = buf;
+                    maxProfit = buf
                 }
 
-                count++;
+                count++
             }
 
-            println(maxProfit);
+            println(maxProfit)
         }
     }
 

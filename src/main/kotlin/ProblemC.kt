@@ -2,18 +2,16 @@ class ProblemC {
 
     fun main() {
 
-        var inputString: List<Int>;
-        var n: Int = readInt();
-        var minCountTasks: Int = 0;
+        val n = readInt()
+        val inputString = readListInt().sorted()
 
-        inputString = readListInt();
-        inputString = inputString.sorted();
-        for (i in 0..n-2 step 2)
+        var minCountTasks = 0
+        for (i in 0 until n-1 step 2)
         {
-            minCountTasks += inputString[i + 1] - inputString[i];
+            minCountTasks += inputString[i + 1] - inputString[i]
         }
 
-        println(minCountTasks);
+        println(minCountTasks)
     }
 
 }
